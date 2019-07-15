@@ -1,0 +1,11 @@
+<ul class="nav nav-tabs">
+
+
+  <li class="nav-item"
+    (click)="selectLesson(lesson)"
+    *ngFor="let lesson of lessons" class="list-group-item"
+    [ngClass]="{'active': lesson.id == lessonId}"
+  >
+    {{lesson.title}}
+  </li>
+</ul>

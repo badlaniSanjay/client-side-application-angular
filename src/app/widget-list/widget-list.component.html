@@ -1,0 +1,12 @@
+<ul class="list-group">
+  <li class="list-group-item active">
+    Widgets
+  </li>
+  <li
+    (click)="selectWidget(widget)"
+    *ngFor="let widget of widgets" class="list-group-item"
+    [ngClass]="{'active': widget.id == widgetId}"
+  >
+    {{widget.name}}
+  </li>
+</ul>

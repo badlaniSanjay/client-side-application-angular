@@ -1,0 +1,11 @@
+<ul class="nav nav-pills">
+
+
+  <li class="nav-item"
+      (click)="selectTopic(topic)"
+      *ngFor="let topic of topics" class="list-group-item"
+      [ngClass]="{'active': topic.id == topicId}"
+  >
+    {{topic.title}}
+  </li>
+</ul>
