@@ -23,6 +23,7 @@
   <div class = "list-group-item"
        (click)="selectWidget(widget)"
        *ngFor="let widget of widgets"
+       [ngClass]="{'active': widget.id == widgetId}"
   >
 
     <div *ngIf="widget.type == 'HEADING'">

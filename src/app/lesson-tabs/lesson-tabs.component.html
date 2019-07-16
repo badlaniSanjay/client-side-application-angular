@@ -1,25 +1,25 @@
-<!--<ul class="nav nav-tabs">-->
+<ul class="nav nav-tabs">
 
 
-<!--  <li class="nav-item"-->
-<!--    (click)="selectLesson(lesson)"-->
-<!--    *ngFor="let lesson of lessons" class="list-group-item"-->
-<!--    [ngClass]="{'active': lesson.id == lessonId}"-->
-<!--  >-->
-<!--    {{lesson.title}}-->
-<!--  </li>-->
-<!--</ul>-->
-
-
-<div class="btn-group text-secondary">
-
-
-  <div class ="text-white btn"  (click)="selectLesson(lesson)"
-       *ngFor="let lesson of lessons"
-       [ngClass]="{'active': lesson.id == lessonId}">
+  <li class="nav-item btn text-black"
+    (click)="selectLesson(lesson)"
+    *ngFor="let lesson of lessons" class="list-group-item"
+    [ngClass]="{'active': lesson.id == lessonId}"
+  >
     {{lesson.title}}
+  </li>
+</ul>
 
-  </div>
+
+<!--<div class="btn-group text-secondary">-->
 
 
-</div>
+<!--  <div class ="text-white btn"  (click)="selectLesson(lesson)"-->
+<!--       *ngFor="let lesson of lessons"-->
+<!--       [ngClass]="{'active': lesson.id == lessonId}">-->
+<!--    {{lesson.title}}-->
+
+<!--  </div>-->
+
+
+<!--</div>-->
