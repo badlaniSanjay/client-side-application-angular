@@ -1,0 +1,39 @@
+
+<div className = "container-fluid">
+
+  <h1>
+    Courses !!
+  </h1>
+
+<div className="off-white scroll-max-height">
+  <div className="row">
+    <div className="col-sm-1"></div>
+    <div className="col-sm-10">
+      <div className='card-columns'>
+        <div className='card'
+             *ngFor="let course of courses"
+        >
+          <img className="card-img-top" src="https://picsum.photos/300/200" alt="Card cap"/>
+          <div className="card-body">
+            <h5 className="card-title">
+              <a routerLink="/courses/{{course.id}}">
+                {{course.title}}
+              </a>
+            </h5>
+            <p className="card-text">Last Updated on 12:45</p>
+          </div>
+          <div className="card-footer">
+            <small className="text-muted">
+
+            </small>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="col-sm-1"></div>
+  </div>
+</div>
+</div>
+
+

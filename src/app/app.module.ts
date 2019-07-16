@@ -3,15 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { WhiteBoardComponent } from './white-board/white-board.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { ProfileComponent } from './profile/profile.component';
 import {routing} from './app.routing';
 import { ColumnNavigatorComponent } from './column-navigator/column-navigator.component';
 import CourseService from './services/CourseService';
-import { CourseListComponent } from './course-list/course-list.component';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { ModuleListComponent } from './module-list/module-list.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
@@ -20,22 +14,19 @@ import LessonService from './services/LessonService';
 import { TopicPillsComponent } from './topic-pills/topic-pills.component';
 import TopicService from './services/TopicService';
 import { WidgetListComponent } from './widget-list/widget-list.component';
+import WidgetService from './services/WidgetService';
+import { CourseGridComponent } from './course-grid/course-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent,
-    WhiteBoardComponent,
-    LoginComponent,
-    RegisterComponent,
-    ProfileComponent,
     ColumnNavigatorComponent,
-    CourseListComponent,
     CourseViewerComponent,
     ModuleListComponent,
     LessonTabsComponent,
     TopicPillsComponent,
-    WidgetListComponent
+    WidgetListComponent,
+    CourseGridComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +37,8 @@ import { WidgetListComponent } from './widget-list/widget-list.component';
     CourseService,
     ModuleService,
     LessonService,
-    TopicService
+    TopicService,
+    WidgetService
   ],
   bootstrap: [AppComponent]
 })

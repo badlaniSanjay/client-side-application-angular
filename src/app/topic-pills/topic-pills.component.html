@@ -1,11 +1,25 @@
-<ul class="nav nav-pills">
+<!--<ul class="nav nav-pills">-->
 
 
-  <li class="nav-item"
-      (click)="selectTopic(topic)"
-      *ngFor="let topic of topics" class="list-group-item"
-      [ngClass]="{'active': topic.id == topicId}"
-  >
+<!--  <li class="nav-item"-->
+<!--      (click)="selectTopic(topic)"-->
+<!--      *ngFor="let topic of topics" class="list-group-item"-->
+<!--      [ngClass]="{'active': topic.id == topicId}"-->
+<!--  >-->
+<!--    {{topic.title}}-->
+<!--  </li>-->
+<!--</ul>-->
+
+
+<div class="btn-group text-secondary">
+
+
+  <div class =" btn"  (click)="selectTopic(topic)"
+       *ngFor="let topic of topics" class="list-group-item"
+       [ngClass]="{'active': topic.id == topicId}">
     {{topic.title}}
-  </li>
-</ul>
+
+  </div>
+
+
+</div>

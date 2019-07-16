@@ -3,10 +3,11 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export default class WidgetService {
 
-  server = 'http://localhost:8080';
+  // server = 'http://localhost:8080';
+  server  = 'https://fierce-sea-47240.herokuapp.com';
 
   findAllWidgetsForTopic = topicId =>
-    fetch(this.server + '/api/topics/${topicId}/widgets')
+    fetch(this.server + '/api/topics/'+ topicId + '/widgets')
       .then(response => response.json());
 
   findAllWidgets = () =>

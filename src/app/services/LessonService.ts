@@ -3,7 +3,8 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export default class LessonService {
 
-  server = 'http://localhost:8080';
+  // server = 'http://localhost:8080';
+  server  = 'https://fierce-sea-47240.herokuapp.com';
 
   findAllLessonsForModule = moduleId =>
     fetch(this.server + '/api/modules/' + moduleId + '/lessons')

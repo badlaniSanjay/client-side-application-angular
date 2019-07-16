@@ -1,12 +1,71 @@
-<ul class="list-group">
-  <li class="list-group-item active">
-    Widgets
-  </li>
-  <li
-    (click)="selectWidget(widget)"
-    *ngFor="let widget of widgets" class="list-group-item"
-    [ngClass]="{'active': widget.id == widgetId}"
+<!--<ul class="list-group">-->
+<!--&lt;!&ndash;  <li class="list-group-item active">&ndash;&gt;-->
+<!--&lt;!&ndash;    Widgets&ndash;&gt;-->
+<!--&lt;!&ndash;  </li>&ndash;&gt;-->
+<!--  <li-->
+<!--    (click)="selectWidget(widget)"-->
+<!--    *ngFor="let widget of widgets" class="list-group-item"-->
+<!--    [ngClass]="{'active': widget.id == widgetId}"-->
+<!--  >-->
+<!--    {{widget.name}}-->
+<!--  </li>-->
+<!--</ul>-->
+
+
+
+<div className="container-fluid">
+  <div className="row">
+
+
+
+<div className="list-group">
+
+  <div class = "list-group-item"
+       (click)="selectWidget(widget)"
+       *ngFor="let widget of widgets"
   >
-    {{widget.name}}
-  </li>
-</ul>
+
+    <div *ngIf="widget.type == 'HEADING'">
+      <div *ngIf="widget.size === 'Heading 3'"><h3>{{widget.text}}</h3></div>
+      <div *ngIf="widget.size === 'Heading 2'"><h2>{{widget.text}}</h2></div>
+      <div *ngIf="widget.size === 'Heading 1'"><h1>{{widget.text}}</h1></div>
+    </div>
+    <div *ngIf="widget.type == 'PARAGRAPH'">
+      <p>{{widget.text}}</p>
+    </div>
+    <div *ngIf="widget.type == 'LIST'">
+      <div *ngIf="widget.type == 'Unordered_List'">
+        <ul>
+          <li *ngFor="let item of widget.text.split('\n')">
+            {{item}}
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="widget.type == 'Ordered_List'">
+        <ol>
+          <li *ngFor="let item of widget.text.split('\n')">
+            {{item}}
+          </li>
+        </ol>
+      </div>
+
+    </div>
+    <div *ngIf="widget.type == 'LINk'">
+      <a [href]=widget.src >{{widget.text}}</a>
+    </div>
+    <div *ngIf="widget.type == 'IMAGE'">
+      <img [src] = widget.text />
+    </div>
+
+
+
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+
+
